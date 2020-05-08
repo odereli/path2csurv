@@ -97,7 +97,7 @@ clustered_multitask_multiple_kernel_survival_train <- function(Km, y, delta, par
         for (k in 1:K) {
           for (m in 1:P) {
             norm_tm <- sqrt(sum(sapply(1:T, function(t) {Z_new[t, k] * (t(models[[t]]$alpha) %*% Km[[t]][,,m] %*% models[[t]]$alpha)})))
-            eta_new[k, m] <- eta_new[k, m] + eta[k, m] * norm_tm
+            eta_new[k, m] <- eta[k, m] * norm_tm
           }
         }
         
