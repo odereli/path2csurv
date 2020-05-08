@@ -102,9 +102,9 @@ clustered_multitask_multiple_kernel_survival_train <- function(Km, y, delta, par
         }
         
         
-        eta_new<- eta_new/ matrix(rowSums(eta_new), K, P)
+        eta_new <- eta_new/ matrix(rowSums(eta_new), K, P)
         eta_new[eta_new< parameters$epsilon] <- 0
-        eta_new<- eta_new/ matrix(rowSums(eta_new), K, P)
+        eta_new <- eta_new/ matrix(rowSums(eta_new), K, P)
         
         for (t in 1:T) {
           Keta[[t]] <- calculate_Keta(Km[[t]], Z_new[t,] %*% eta_new)
