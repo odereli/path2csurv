@@ -1,0 +1,23 @@
+This repository contains R implementation of the algorithms proposed in "...", which is appearing in ....
+
+run_survival_svm_tcga.R shows how to replicate support vector machine experiments on TCGA cohorts.
+run_survival_group_lasso_mkl_tcga.R shows how to replicate group Lasso MKL experiments on TCGA cohorts.
+run_survival_group_lasso_mtmkl_tcga.R shows how to replicate group Lasso multitask MKL experiments on TCGA cohorts.
+run_survival_clustered_group_lasso_mtmkl_tcga.R shows how to replicate clustered group Lasso multitask MKL experiments on TCGA cohorts.
+
+Path2CSurv methods
+------------------
+* survival_helper.R => helper functions
+* solve_survival_svm_cplex.R => survival support vector machine solver using CPLEX optimization software
+* single_kernel_survival_train.R => training procedure for survival support vector machine
+* single_kernel_survival_test.R => test procedure for survival support vector machine
+* group_lasso_multiple_kernel_survival_train.R => training procedure for group Lasso MKL
+* group_lasso_multiple_kernel_survival_test.R => test procedure for group Lasso MKL
+* group_lasso_multitask_multiple_kernel_survival_train.R => training procedure for group Lasso multitask MKL
+* group_lasso_multitask_multiple_kernel_survival_test.R => test procedure for group Lasso multitask MKL
+* clustered_multitask_multiple_kernel_survival_train.R => training procedure for clustered group Lasso multitask MKL
+* clustered_multitask_multiple_kernel_survival_test.R => test procedure for clustered group Lasso multitask MKL
+
+If you use any of the algorithms implemented in this repository, please cite the following paper:
+
+...
